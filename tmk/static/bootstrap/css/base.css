@@ -1,0 +1,659 @@
+@font-face {
+    font-family: 'BNazanin';
+    src: url('../fonts/BNazanin.ttf');
+    font-style: normal;
+    font-family: 'yekan';
+    src: url('../fonts/BYekan.eot?#') format('eot'), /* IE6?8 */ url('../fonts/BYekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/BYekan.ttf') format('truetype'); /* Saf3?5, Chrome4+, FF3.5, Opera 10+ */
+;
+}
+
+.bodyDiv {
+    overflow-x: hidden;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.carousel-control {
+    width: 8%;
+    width: 0px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    margin-right: 35px;
+    margin-left: 40px;
+    background-image: none;
+    opacity: 1;
+}
+
+.carousel-control > a > span {
+    color: white;
+    font-size: 29px !important;
+}
+
+.carousel-col {
+    position: relative;
+    min-height: 1px;
+    padding: 5px;
+    float: left;
+}
+
+.active > div {
+    display: none;
+}
+
+.active > div:first-child {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    /*navbar*/
+    .navbar-collapse {
+        background-color: #282828;
+    }
+
+    .navbar_row {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+
+    .nav_ul {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    .my-nav-margin {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header-button {
+        font-family: yekan;
+        margin-top: 10px;
+        margin-right: 5px;
+        font-size: x-large;
+    }
+
+    /*slider*/
+    /*why*/
+    .main_wel {
+        margin-top: 10px;
+        background-color: #003366;
+        height: 750px;
+    }
+
+    .why-kasra-main-p {
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .well_text {
+        height: 115px;
+        margin-top: 0px;
+        background-color: #14144d;
+        border: hidden;
+    }
+
+    .p-well {
+        text-align: right;
+        font-size: small;
+        color: white;
+    }
+
+    /*parallax*/
+    .parallax {
+        /* The image used */
+        background-image: url("../pics/netDesign2.jpg");
+
+        /* Set a specific height */
+        height: 350px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .h_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    .p_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: small;
+        margin-top: 20px;
+    }
+
+    /*carousel*/
+    .carousel_row {
+        margin-top: 20px;
+    }
+
+    .carousel-inner {
+        margin-left: 50px;
+    }
+
+    .carousel-inner .active.left {
+        left: -50%;
+    }
+
+    .carousel-inner .active.right {
+        left: 50%;
+    }
+
+    .carousel-inner .next {
+        left: 50%;
+    }
+
+    .carousel-inner .prev {
+        left: -50%;
+    }
+
+    .carousel-col {
+        width: 100%;
+    }
+
+    /*organz*/
+    .custDiv {
+        background-color: #585858;
+        margin-top: 10px !important;
+        height: 40px;
+    }
+
+    .cust_p {
+        color: #f2c01a;
+        text-align: right;
+        font-size: medium;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /*navbar*/
+    .navbar-collapse {
+        background-color: #282828;
+    }
+
+    .navbar_row {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+
+    .nav_ul {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    .my-nav-margin {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header-button {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: x-large;
+    }
+
+    /*slider*/
+    /*why*/
+    .main_wel {
+        margin-top: 10px;
+        background-color: #003366;
+        height: 850px;
+    }
+
+    .why-kasra-main-p {
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+        font-size: large;
+    }
+
+    .well_text {
+        height: 110px;
+        margin-top: 20px;
+        background-color: #14144d;
+        border: hidden;
+    }
+
+    .iconDiv {
+        margin-top: 20px;
+    }
+
+    .p-well {
+        margin-top: 10px;
+        text-align: right;
+        font-size: medium;
+        color: white;
+    }
+
+    /*parallax*/
+    .parallax {
+        /* The image used */
+        background-image: url("../pics/netDesign2.jpg");
+        /* Set a specific height */
+        height: 500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .h_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    .p_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: large;
+        margin-top: 20px;
+    }
+
+    /*carousel*/
+    .caro_txt {
+        color: white;
+        text-align: left;
+        font-size: medium;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .carousel_row {
+        margin-top: 40px;
+    }
+
+    .caro_img {
+        margin-left: 120px;
+    }
+
+    .carousel-inner .active.left {
+        left: -50%;
+    }
+
+    .carousel-inner .active.right {
+        left: 50%;
+    }
+
+    .carousel-inner .next {
+        left: 50%;
+    }
+
+    .carousel-inner .prev {
+        left: -50%;
+    }
+
+    .carousel-col {
+        width: 50%;
+    }
+
+    .active > div:first-child + div {
+        display: block;
+    }
+
+    /*organz*/
+    .custDiv {
+        background-color: #585858;
+        margin-top: 10px !important;
+        height: 40px;
+    }
+
+    .cust_p {
+        color: #f2c01a;
+        text-align: right;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+.well_height{
+    height: 150px;
+    width: 150px;
+}
+}
+
+/*size asli browser*/
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+
+    /*navbar*/
+    .navbar-collapse {
+        background-color: #282828;
+    }
+
+    .navbar_row {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+
+    .nav_ul {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    .my-nav-margin {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header-button {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    /*slider*/
+    /*why*/
+    .main_wel {
+        margin-top: 10px;
+        background-color: #003366;
+        height: 1200px;
+    }
+
+    .why-kasra-main-p {
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    .well_text {
+        height: 150px;
+        margin-top: 40px;
+        background-color: #14144d;
+        border: hidden;
+
+    }
+
+    .p-well {
+        margin-top: 20px;
+        text-align: right;
+        font-size: x-large;
+        color: white;
+    }
+
+    .iconDiv {
+        margin-top: 20px;
+    }
+
+    /*parallax*/
+    .parallax {
+        /* The image used */
+        background-image: url("../pics/netDesign2.jpg");
+
+        /* Set a specific height */
+        height: 600px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .h_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    .p_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: x-large;
+        margin-top: 20px;
+    }
+
+    /*carousel*/
+    .caro_txt {
+        color: white;
+        text-align: left;
+        font-size: medium;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .carousel_row {
+        margin-top: 80px;
+    }
+
+    .carousel-inner {
+
+        margin-left: 100px;
+    }
+
+    .carousel-inner .active.left {
+        left: -33%;
+    }
+
+    .carousel-inner .active.right {
+        left: 33%;
+    }
+
+    .carousel-inner .next {
+        left: 33%;
+    }
+
+    .carousel-inner .prev {
+        left: -33%;
+    }
+
+    .carousel-col {
+        width: 33%;
+    }
+
+    .active > div:first-child + div {
+        display: block;
+    }
+
+    .active > div:first-child + div + div {
+        display: block;
+    }
+
+    /*organz*/
+    .custDiv {
+        background-color: #585858;
+        margin-top: 10px !important;
+        height: 40px;
+    }
+
+    .cust_p {
+        color: #f2c01a;
+        text-align: right;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+.well_height{
+    height: 150px;
+    width: 150px;
+}
+
+
+}
+
+@media screen and (min-width: 1400px) {
+    /*navbar*/
+    .navbar-collapse {
+        background-color: #282828;
+    }
+
+    .navbar_row {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+
+    .nav_ul {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    .my-nav-margin {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header-button {
+        font-family: yekan;
+        margin-top: 10px;
+        font-size: x-large;
+    }
+
+    /*slider*/
+    /*why*/
+    .main_wel {
+        margin-top: 10px;
+        background-color: #003366;
+        height: 1000px;
+    }
+
+    .why-kasra-main-p {
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    .well_text {
+        height: 150px;
+        margin-top: 40px;
+        background-color: #14144d;
+        border: hidden;
+
+    }
+
+    .p-well {
+        text-align: right;
+        font-size: x-large;
+        color: white;
+    }
+
+    .iconDiv {
+        margin-top: 20px;
+    }
+
+    /*parallax*/
+    .parallax {
+        /* The image used */
+        background-image: url("../pics/netDesign2.jpg");
+
+        /* Set a specific height */
+        height: 800px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .h_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    .p_main_parallax {
+        text-align: center;
+        color: white;
+        font-size: x-large;
+        margin-top: 20px;
+    }
+
+    /*carousel*/
+    .caro_txt {
+        color: white;
+        text-align: center;
+        font-size: medium;
+        margin-top: 20px;
+        margin-right: 140px;
+    }
+
+    .carousel_row {
+        margin-top: 80px;
+    }
+
+    .carousel-inner {
+
+        margin-left: 100px;
+    }
+
+    .carousel-inner .active.left {
+        left: -33%;
+    }
+
+    .carousel-inner .active.right {
+        left: 33%;
+    }
+
+    .carousel-inner .next {
+        left: 33%;
+    }
+
+    .carousel-inner .prev {
+        left: -33%;
+    }
+
+    .carousel-col {
+        width: 33%;
+    }
+
+    .active > div:first-child + div {
+        display: block;
+    }
+
+    .active > div:first-child + div + div {
+        display: block;
+    }
+
+
+    /*organz*/
+    .custDiv {
+        background-color: #585858;
+        margin-top: 10px !important;
+        height: 40px;
+    }
+
+    .cust_p {
+        color: #f2c01a;
+        text-align: right;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .well_height{
+    height: 150px;
+    width: 150px;
+}
+
+}

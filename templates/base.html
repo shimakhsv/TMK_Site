@@ -1,0 +1,466 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>TMK</title>
+
+    <!-- Bootstrap -->
+    <link href="../static_in_pro/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static_in_pro/bootstrap/css/base.css" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+</head>
+<body class="bodyDiv" style="font-family: yekan">
+
+<!--navbar-->
+<div class="container-fluid" style="margin-bottom: -20px">
+    <nav class="navbar-row row navbar navbar-inverse navbar-default navbar-static-top ">
+        <div class="container-fluid">
+            <div class="navbar-header navbar-right">
+                <button type="button" class="navbar-toggle collapsed " data-target=".navbar-collapse"
+                        data-toggle="collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: right">
+                <ul class="nav_ul nav navbar-nav navbar-right">
+
+                    <li class="my-nav-margin"><a href="#">اطلاعات تماس با ما <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="my-nav-margin"><a href="#">اخبار </a></li>
+                    <li class="dropdown my-nav-margin">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">خدمات <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-right">
+                            <li style="text-align: right"><a href="sevices.html">طراحی شبکه</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li style="text-align: right"><a href="sevices.html">طراحی نرم افزار</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li style="text-align: right"><a href="sevices.html">امنیت شبکه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="my-nav-margin"><a href="#">درباره ی ما</a></li>
+                    <li class="my-nav-margin"><a href="#">صفحه اصلی </a></li>
+                </ul>
+                <ul class="header-button nav navbar-nav">
+                    <li>
+                        <button type="button" class=" btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                                data-whatever="@mdo" style="  padding: 5px 10px;">Contact Us
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--navbar-popup-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">contact us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="base.html" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="recipient-name" class="form-control-label">email</label>
+                        <input type="text" class="form-control" id="email" name="email" value="{{ email }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="form-control-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" value="{{ message }}"></textarea>
+                    </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" value="send message"/>
+                        {#                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+                        {#                <button type="submit" class="btn btn-primary">Send message</button>#}
+                    </div>
+                </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <!--slider-->
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 0px">
+
+            <div class="carousel slide" id="imagecarousel" data-wrap="true" data-pause="false" data-interval="3000">
+                <ol class="carousel-indicators">
+                    <li data-target="imagecarousel" data-slide-to="0" class="active"></li>
+
+                    <li data-target="imagecarousel" data-slide-to="1"></li>
+
+                    <li data-target="imagecarousel" data-slide-to="2"></li>
+
+                    <li data-target="imagecarousel" data-slide-to="3"></li>
+
+                    <li data-target="imagecarousel" data-slide-to="4"></li>
+
+                    <li data-target="imagecarousel" data-slide-to="5"></li>
+
+                </ol>
+                <div class="carousel-inner inner" style="margin-left:0px ">
+                    <div class="item active">
+                        <img src="{% static "bootstrap/pics/isp.jpg" %}" class="img-responsive"/>
+
+                        <div class="carousel-caption">
+                            <h2></h2>
+
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "bootstrap/pics/narm_afzar2.jpg" %}"
+                             class="img-responsive"/>
+
+                        <div class="carousel-caption">
+                            <h2 style="font-weight: bold"></h2>
+
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "bootstrap/pics/netDesign.jpg" %}"
+                             class="img-responsive"/>
+
+                        <div class="carousel-caption">
+                            <h2></h2>
+
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "bootstrap/pics/security.jpg" %}"
+                             class="img-responsive"/>
+
+                        <div class="carousel-caption">
+                            <h2></h2>
+
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "bootstrap/pics/security2.jpg" %}"
+                             class="img-responsive"/>
+
+                        <div class="carousel-caption">
+                            <h2></h2>
+
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img style="height:600px width:1200px" src="{% static "bootstrap/pics/webDesign2.jpg" %}"
+                             class="img-responsive"/>
+
+                        <div class="carousel-caption">
+                            <h2></h2>
+
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#imagecarousel" class="carousel-control left" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+
+
+                <a href="#imagecarousel" class="carousel-control right" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!--why-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class=" main_wel well">
+                <p class="why-kasra-main-p">
+                    چرا طراحان مبتکر کسرا ؟
+                </p>
+
+                <div class="row">
+
+
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="well_text well">
+
+                            <p class="p-well">
+                                با جدید ترین محصولات و به روز ترین و تخصصی ترین خدمات در حوزه فناوری اطلاعات، نوآوری و
+                                خلاقیت را تقدیم مشتری می کند.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 hidden-xs">
+                        <div class="iconDiv">
+                            <img class="img-responsive" src="../static/bootstrap/why_icon/creativily.png"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="well_text well">
+
+                            <p class="p-well">
+                                وسواس همیشگی برای بهترین کیفیت
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 hidden-xs">
+                        <div class="iconDiv">
+                            <img class="img-responsive" src="../static/bootstrap/why_icon/quality.png"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="well_text well">
+                            <p class="p-well">
+                                با بیش از 10 سال تجربه موفق و نماینده شرکت های گروه دوران و مهندسین مشاور تتیس در خراسان
+                                جنوبی و دارای مجوز معتبر از شورای عالی انفورماتیک کشور از سال 86 تاکنون
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 hidden-xs">
+                        <div class="iconDiv">
+                            <img class="img-responsive" src="../static/bootstrap/why_icon/experience.png"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="well_text well">
+                            <p class="p-well">
+                                آموزش تخصصی جدیدترین متدهای روز دنیا و پشتیبانی لحظه به لحظه خدمات
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 hidden-xs">
+                        <div class="iconDiv">
+                            <img class="img-responsive" src="../static/bootstrap/why_icon/learn_support.png"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="well_text well">
+                            <p class="p-well">
+                                قیمت مناسب به دلیل ارائه محصولات به صورت بومی
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 hidden-xs">
+                        <div class="iconDiv">
+                            <img class="img-responsive" src="../static/bootstrap/why_icon/low_price.png"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--parallax-->
+    <div class="row" style="margin-top: 0px">
+        <div class="parallax">
+            <!--header text parallax-->
+            <div class="row">
+                <h1 class="h_main_parallax">
+                    خدمات شرکت طراحان مبتکر کسرا
+                </h1>
+
+                <p class="p_main_parallax">
+                    با ما خدمات شبکه و نرم افزار را طور دیگری تجربه کنید
+                </p>
+
+
+                <div class="carousel_row row hidden-xs">
+                    <div class="col-xs-11 col-md-10 col-centered">
+
+                        <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="carousel-col">
+                                        <div class="caro_img row">
+                                            <a href="services.html">
+                                                <img class="img-responsive"
+                                                     src="../static/bootstrap/services_icon/security.png">
+
+                                                <p class="caro_txt">
+                                                    امنیت شبکه
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="carousel-col">
+                                        <div class="caro_img row">
+                                            <a href="services.html">
+                                                <img class="img-responsive"
+                                                     src="../static/bootstrap/services_icon/website.png">
+
+                                                <p class="caro_txt">
+                                                    طراحی وب سایت
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="carousel-col">
+                                        <div class="caro_img">
+                                            <a href="services.html">
+                                                <img class="img-responsive"
+                                                     src="../static/bootstrap/services_icon/software.png">
+
+                                                <p class="caro_txt">
+                                                    طراحی نرم افزار های کاربردی
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="carousel-col">
+                                        <div class="caro_img">
+                                            <a href="services.html">
+                                                <img class="img-responsive"
+                                                     src="../static/bootstrap/services_icon/network.png">
+
+                                                <p class="caro_txt">
+                                                    طراحی و پشتیبانی شبکه
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <div class="left carousel-control">
+                                <a href="#carousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </div>
+                            <div class="right carousel-control">
+                                <a href="#carousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--organization list-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="custDiv">
+                <p class="cust_p">
+                    برخی از مشتریان طراحان مبتکر کسرا
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 30px">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+            <div class="col-xs-3">
+                <div class="well_height well"></div>
+            </div>
+        </div>
+    </div>
+    <!--end organization list-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="background-color: #0f0f31;height: 100px;margin-left: -20px;margin-right: -20px"></div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../static_in_pro/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#imagecarousel').carousel();
+        $('.carousel[data-type="multi"] .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 1; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+</body>
+</html>
